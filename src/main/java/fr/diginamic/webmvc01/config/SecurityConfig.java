@@ -73,6 +73,7 @@ implements WebMvcConfigurer {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/logout").permitAll()
+                .antMatchers("/token").permitAll()
                 .antMatchers("/user").authenticated()
                 .antMatchers("/api/users").permitAll()
                 //.antMatchers("/Professeurs/**").permitAll()

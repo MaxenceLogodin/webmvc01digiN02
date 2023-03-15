@@ -14,9 +14,10 @@ import fr.diginamic.webmvc01.repository.UserRepository;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200",
-	allowedHeaders = {"Requestor-Type", "Authorization"},
-	exposedHeaders = "X-Get-Header")
+@CrossOrigin
+//(origins = "http://localhost:4200",
+//	allowedHeaders = {"Requestor-Type", "Authorization", "X-Auth-Token"},
+//	exposedHeaders = "X-Get-Header")
 @RequestMapping("/api")
 public class ApiController {
 	@Autowired

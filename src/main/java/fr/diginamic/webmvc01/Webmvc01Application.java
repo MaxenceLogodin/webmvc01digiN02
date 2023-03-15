@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
 @SpringBootApplication
 @RestController
 @CrossOrigin(origins = "http://localhost:4200",
-		allowedHeaders = {"Requestor-Type", "Authorization"},
+		allowedHeaders = {"Requestor-Type", "Authorization", "X-Auth-Token"},
 		exposedHeaders = "X-Get-Header")
 public class Webmvc01Application implements WebMvcConfigurer {
 
@@ -48,6 +48,5 @@ public class Webmvc01Application implements WebMvcConfigurer {
 	public Map<String, String> token(HttpSession session) {
 		return Collections.singletonMap("token", session.getId());
 	}
-
 	
 }
